@@ -4,81 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.lifeistech.android.clerkcall.EqualizerActivity"
-    android:background="@drawable/tyarin">
-
-    <MediaController
-        android:id="@+id/mediaController"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_gravity="center"
-        android:background="#8000"
-        android:layout_centerInParent="true" />
-
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right|center_vertical"
-        android:indeterminate="false"
-        android:layout_below="@+id/mediaController" />
+    android:background="@drawable/ab">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:orientation="vertical"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="New Text"
+            android:id="@+id/textView" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical" />
+
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Button"
-                android:id="@+id/button4"
-                android:onClick="chose"/>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:orientation="vertical">
-
-                <SeekBar
-                    android:id="@+id/seekBar2"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="right|bottom"
-                    android:max="10"
-                    android:progress="5"
-                    android:progressDrawable="@drawable/seekbar_speed" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/seekBar2"
-                    android:text="遅い" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/seekBar2"
-                    android:layout_centerHorizontal="true"
-                    android:text="普通" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_below="@+id/seekBar2"
-                    android:text="速い" />
-
-
-            </RelativeLayout>
-
-        </LinearLayout>
-
+            android:text="曲の選択"
+            android:id="@+id/button4"
+            android:onClick="chose"
+            android:textColor="#f4a317"
+            android:background="@drawable/btn_record"
+            android:layout_gravity="bottom" />
     </FrameLayout>
 
 </RelativeLayout>
