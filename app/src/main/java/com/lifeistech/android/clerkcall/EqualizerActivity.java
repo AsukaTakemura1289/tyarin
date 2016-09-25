@@ -159,6 +159,8 @@ public class EqualizerActivity extends AppCompatActivity implements MediaControl
             mMediaPlayer.start();
 
 
+
+
             Log.d(EqualizerActivity.class.getSimpleName(), "load media player");
 
         }
@@ -176,13 +178,16 @@ public class EqualizerActivity extends AppCompatActivity implements MediaControl
 //        mSoundPool.play(R.raw.kimi, 1.0f, 1.0f, 1, 0, 1);
 //
 //    }
-//
-//    public void fast(View v) {
-//        PlaybackParams params = new PlaybackParams();
-//        params.setSpeed(2.f);
-//        mMediaPlayer.setPlaybackParams(params);
-//
-//    }
+
+    public void fast(View v) {
+        mMediaPlayer.pause();
+
+        PlaybackParams params = new PlaybackParams();
+        params.setSpeed(2.f);
+        mMediaPlayer.setPlaybackParams(params);
+
+        mMediaPlayer.start();
+    }
 
     @Override
     public void start() {
